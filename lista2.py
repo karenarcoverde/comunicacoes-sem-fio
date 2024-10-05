@@ -26,7 +26,7 @@ for counter in range(4):
     Gr = GR[counter]
     
     # Cálculo do vetor complexo
-    Vec = Gt / d0 + R * Gr / d1 * np.exp(-1j * phd)
+    Vec = np.sqrt(Gt) / d0 + R * np.sqrt(Gr) / d1 * np.exp(-1j * phd)
     
     # Potência recebida (Pr)
     Pr = (lambda_wave / (4 * np.pi))**2 * np.abs(Vec)**2
